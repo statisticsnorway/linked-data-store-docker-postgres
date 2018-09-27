@@ -7,8 +7,8 @@ services:
     ports:
     - "9090:9090"
     volumes:
-    - conf:/conf:ro
-    - schemas:/schemas:ro
+    - ldspostgresconf:/conf:ro
+    - ldspostgresschemas:/schemas:ro
     depends_on:
     - postgresdb
 
@@ -22,7 +22,7 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
     volumes:
-    - pgdata:/var/lib/postgresql/data
+    - ldspostgresdb:/var/lib/postgresql/data
 
   adminer:
     image: adminer
@@ -30,14 +30,14 @@ services:
     - 8080:8080
 
 volumes:
-  pgdata:
-  conf:
+  ldspostgresdb:
+  ldspostgresconf:
     driver: local
     driver_opts:
       type: none
       device: ${CONF_FOLDER}
       o: bind
-  schemas:
+  ldspostgresschemas:
     driver: local
     driver_opts:
       type: none
