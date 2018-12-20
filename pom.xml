@@ -62,12 +62,12 @@
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-core</artifactId>
-            <version>0.2</version>
+            <version>0.5</version>
         </dependency>
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-persistence-provider-postgres</artifactId>
-            <version>0.2-SNAPSHOT</version>
+            <version>0.2</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
